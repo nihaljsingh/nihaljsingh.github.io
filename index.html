@@ -7,144 +7,236 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-.bgimg {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url('/images/portrait.JPG');
-  min-height: 100%;
-}
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Montserrat", sans-serif
+  }
+
+  .w3-row-padding img {
+    margin-bottom: 12px
+  }
+
+  .bgimg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('/images/portrait.JPG');
+    min-height: 100%;
+  }
+
+  .text-container {
+    position: relative;
+    text-align: center;
+    /* font-weight: bold; */
+  }
+
+  .white-text {
+    position: absolute;
+    left: 50%;
+    bottom: 2px;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
 </style>
+
 <body>
 
-<!-- Sidebar with image -->
-<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
-  <div class="bgimg"></div>
-</nav>
+  <!-- Sidebar with image -->
+  <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+    <div class="bgimg"></div>
+  </nav>
 
-<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
-<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
-  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
-    <i class="fa fa-remove"></i>
-  </a>
-  <div class="w3-bar-block w3-center">
-    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
-    <a href="#carpentry" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Carpentry</a>
-    <a href="#photography" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Photography</a>
-    <!-- <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a> -->
-    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
-  </div>
-</nav>
+  <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+  <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2"
+    id="mySidebar">
+    <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright"
+      style="padding:0 12px;">
+      <i class="fa fa-remove"></i>
+    </a>
+    <div class="w3-bar-block w3-center">
+      <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+      <a href="#carpentry" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Carpentry</a>
+      <a href="#photography" class="w3-bar-item w3-button w3-text-grey w3-hover-black"
+        onclick="closeNav()">Photography</a>
+      <!-- <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a> -->
+      <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
+    </div>
+  </nav>
 
-<!-- Page Content -->
-<div class="w3-main w3-padding-large" style="margin-left:40%">
+  <!-- Page Content -->
+  <div class="w3-main w3-padding-large" style="margin-left:40%">
 
-  <!-- Menu icon to open sidebar -->
-  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+    <!-- Menu icon to open sidebar -->
+    <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;"
+      onclick="openNav()"><i class="fa fa-bars"></i></span>
 
-  <!-- Header -->
-  <header class="w3-container w3-center" style="padding:128px 16px" id="home">
-    <h1 class="w3-jumbo"><b>Nihal J. Singh</b></h1>
-    <p>Artist, Carpenter & Photographer</p>
-    <img src="/images/portrait.JPG" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
-    <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
-      <!-- <i class="fa fa-download"> <a href="/cv.pdf" download> </i> CV -->
+    <!-- Header -->
+    <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+      <h1 class="w3-jumbo"><b>Nihal J. Singh</b></h1>
+      <p>Artist, Carpenter & Photographer</p>
+      <img src="/images/portrait.JPG" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
+      <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
+        <!-- <i class="fa fa-download"> <a href="/cv.pdf" download> </i> CV -->
         <!-- <i class="fa fa-download"> <a href="/cv.pdf" download> </i> CV -->
 
-        <p ><a href="/cv.pdf"> View CV</a></p>
-    </button>
-  </header>
+        <p><a href="/cv.pdf"> View CV</a></p>
+      </button>
+    </header>
 
-  <!-- Carpentry Section -->
-  <div class="w3-padding-32 w3-content" id="carpentry">
-    <h2 class="w3-text-grey">Carpentry</h2>
-    <hr class="w3-opacity">
+    <!-- Carpentry Section -->
+    <div class="w3-padding-32 w3-content" id="carpentry">
+      <h2 class="w3-text-grey">Carpentry</h2>
+      <hr class="w3-opacity">
 
-    <!-- Grid for photos -->
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half">
-        <img src="/images/carpentry01.jpg" style="width:100%">
-        <img src="/images/carpentry02.jpg" style="width:100%">
-        <img src="/images/carpentry03.jpg" style="width:100%">
+      <!-- Grid for photos -->
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half">
+
+          <div class="text-container">
+            <img src="/images/carpentry01.jpg" style="width:100%">
+            <div class="white-text">Empty Common Community Garden</div>
+          </div>
+
+          <div class="text-container">
+            <img src="/images/carpentry02.jpg" style="width:100%">
+            <div class="white-text">Joy's Garden</div>
+          </div>
+
+          <div class="text-container">
+            <img src="/images/carpentry03.jpg" style="width:100%">
+            <div class="white-text">The Hillyfield Farm</div>
+          </div>
+
+        </div>
+
+        <div class="w3-half">
+
+          <div class="text-container">
+            <img src="/images/carpentry04.jpg" style="width:100%">
+            <div class="white-text">Cat Stairway</div>
+          </div>
+
+          <div class="text-container">
+            <img src="/images/carpentry05.jpg" style="width:100%">
+            <div class="white-text">Joy's Garden</div>
+          </div>
+
+        </div>
+        <!-- End photo grid -->
       </div>
-
-      <div class="w3-half">
-        <img src="/images/carpentry04.jpg" style="width:100%">
-        <img src="/images/carpentry05.jpg" style="width:100%">
-      </div>
-    <!-- End photo grid -->
-    </div>
-  <!-- End Carpentry Section -->
-  </div>
-
-  <!-- Photography Section -->
-  <div class="w3-padding-32 w3-content" id="photography">
-    <h2 class="w3-text-grey">Photography</h2>
-    <hr class="w3-opacity">
-
-    <!-- Grid for photos -->
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half">
-        <img src="/images/5.jpg" style="width:100%">
-        <img src="/images/9.JPG" style="width:100%">
-        <img src="/images/1.jpg" style="width:100%">
-        <img src="/images/12.jpg" style="width:100%">
-        <img src="/images/13.jpg" style="width:100%">
-      </div>
-
-      <div class="w3-half">
-        <img src="/images/4.jpg" style="width:100%">
-        <img src="/images/2.jpg" style="width:100%">
-        <img src="/images/6.JPG" style="width:100%">
-        <img src="/images/10.jpg" style="width:100%">
-        <img src="/images/7.jpg" style="width:100%">
-        <img src="/images/3.jpg" style="width:100%">
-      </div>
-    <!-- End photo grid -->
-    </div>
-  <!-- End Photography Section -->
-  </div>
-
-  <!-- About Section -->
-  <!-- <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
-    <h2>About</h2>
-    <hr class="w3-opacity">
-    <p>
-    </p> -->
-    
-  <!-- End About Section -->
-  <!-- </div> -->
-
-  <!-- Contact Section -->
-  <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
-    <!-- <h2>Contact Me</h2> -->
-    <hr class="w3-opacity">
-
-    <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-xlarge w3-margin-right"></i><a href="https://goo.gl/maps/sC5sKVKW3S2Atjho6">London</a> </p>
-      <p><i class="fa fa-envelope fa-fw w3-xlarge w3-margin-right"> </i><a href="nihalc@protonmail.com">Email</a> </p>
-      <p><i class="fa fa-instagram fa-fw w3-xlarge w3-margin-right"> </i><a href="https://www.instagram.com/nihal.j.singh/">Instagram</a> </p>
+      <!-- End Carpentry Section -->
     </div>
 
-  <!-- End footer -->
-  </footer>
-  
-<!-- END PAGE CONTENT -->
-</div>
+    <!-- Photography Section -->
+    <div class="w3-padding-32 w3-content" id="photography">
+      <h2 class="w3-text-grey">Photography</h2>
+      <hr class="w3-opacity">
 
-<script>
-// Open and close sidebar
-function openNav() {
-  document.getElementById("mySidebar").style.width = "60%";
-  document.getElementById("mySidebar").style.display = "block";
-}
+      <!-- Grid for photos -->
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half">
 
-function closeNav() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-</script>
+          <div class="text-container">
+            <img src="/images/5.jpg" style="width:100%">
+            <div class="white-text">Hot Numbers</div>
+          </div>
+
+          <div class="text-container">
+            <img src="/images/9.JPG" style="width:100%">
+            <div class="white-text">Tate Modern</div>
+          </div>
+          
+          <div class="text-container">
+            <img src="/images/1.jpg" style="width:100%">
+            <div class="white-text">Denmark Station</div>
+          </div>
+          
+          <div class="text-container">
+            <img src="/images/12.jpg" style="width:100%">
+            <div class="white-text">Beckenham Place Park</div>
+          </div>
+
+          <div class="text-container">
+            <img src="/images/13.jpg" style="width:100%">
+            <div class="white-text">Kentish Town Cafe</div>
+          </div>
+          
+        </div>
+
+        <div class="w3-half">
+
+          <div class="text-container">
+            <img src="/images/4.jpg" style="width:100%">
+            <div class="white-text">White Cube</div>
+          </div>
+          
+          <div class="text-container">
+            <img src="/images/2.jpg" style="width:100%">
+            <div class="white-text">Surrey Quays Container</div>
+          </div>
+
+          <div class="text-container">
+            <img src="/images/6.JPG" style="width:100%">
+            <div class="white-text">Wysing Arts Centre</div>
+          </div>
+          
+          <div class="text-container">
+            <img src="/images/10.jpg" style="width:100%">
+            <div class="white-text">Rome Container</div>
+          </div>
+          
+          <div class="text-container">
+            <img src="/images/7.jpg" style="width:100%">
+            <div class="white-text">Emmanuel College</div>
+          </div>
+
+          <div class="text-container">
+            <img src="/images/3.jpg" style="width:100%">
+            <div class="white-text">Motion, Bristol</div>
+          </div>
+          
+        </div>
+        <!-- End photo grid -->
+      </div>
+      <!-- End Photography Section -->
+    </div>
+
+    <!-- Contact Section -->
+    <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
+      <!-- <h2>Contact Me</h2> -->
+      <hr class="w3-opacity">
+
+      <div class="w3-section">
+        <p><i class="fa fa-map-marker fa-fw w3-xlarge w3-margin-right"></i><a
+            href="https://goo.gl/maps/sC5sKVKW3S2Atjho6">London</a> </p>
+        <p><i class="fa fa-envelope fa-fw w3-xlarge w3-margin-right"> </i><a href="nihalc@protonmail.com">Email</a> </p>
+        <p><i class="fa fa-instagram fa-fw w3-xlarge w3-margin-right"> </i><a
+            href="https://www.instagram.com/nihal.j.singh/">Instagram</a> </p>
+      </div>
+
+      <!-- End footer -->
+      </footer>
+
+      <!-- END PAGE CONTENT -->
+    </div>
+
+    <script>
+      // Open and close sidebar
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "60%";
+        document.getElementById("mySidebar").style.display = "block";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+    </script>
 
 </body>
+
 </html>
