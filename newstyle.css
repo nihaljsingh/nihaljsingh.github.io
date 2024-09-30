@@ -101,6 +101,12 @@ ul li a:hover {
     #check:checked~ul {
         right: 0;
     }
+
+    #image-text {
+        display: block;
+        text-align: center;
+    }
+
 }
 
 /* image grid */
@@ -117,13 +123,18 @@ ul li a:hover {
     object-fit: cover;
 }
 
-#image-text {
-    display: none;
+@media (min-width: 769px) {
+
+    #image-text {
+        display: none;
+        text-align: center;
+    }
+
+    #image-container:hover #image-text {
+        display: block;
+    }
 }
 
-#image-container:hover #image-text {
-    display: block;
-}
 
 /* images portfolio */
 #portfolio p{
