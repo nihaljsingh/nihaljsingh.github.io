@@ -39,8 +39,6 @@ ul li {
     padding: 10px;
     color: black;
     text-decoration: underline wavy #2196F3 1.5px;
-    /* text-decoration-style: wavy;
-    text-decoration-thickness: 1.5px; */
 }
 
 .not-active {
@@ -64,7 +62,7 @@ ul li a:hover {
 
 .checkbtn {
     font-size: 30px;
-    color: orange;
+    color: black;
     cursor: pointer;
     display: none;
 }
@@ -72,6 +70,26 @@ ul li a:hover {
 #check {
     display: none;
 }
+
+
+/* image grid */
+
+.image-fit {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.writing-fit {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.image-text-small {
+    font-size: 10px;
+}
+
 
 @media (max-width: 768px) {
     .checkbtn {
@@ -82,11 +100,11 @@ ul li a:hover {
 
     ul {
         position: fixed;
-        top: 80px;
+        top: 90px;
         right: -100%;
         background-color: white;
         width: 100%;
-        height: 80px;
+        height: 70px;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -113,20 +131,6 @@ ul li a:hover {
 
 }
 
-/* image grid */
-
-.image-fit {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
-.writing-fit {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-}
-
 @media (min-width: 769px) {
 
     #image-text {
@@ -144,10 +148,8 @@ ul li a:hover {
 #portfolio p {
     font-size: 20px;
     text-align: left;
-    margin-top: 1em;
+    margin-top: 2em;
     margin-bottom: 1em;
-    /* margin-left: 1em; */
-    /* margin-right: 1em; */
 }
 
 #portfolio a {
