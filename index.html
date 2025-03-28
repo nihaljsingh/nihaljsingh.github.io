@@ -7,17 +7,10 @@
   <meta name="description" content="Portfolio of Nihal J. Singh showcasing various projects and artworks.">
   <meta name="keywords" content="Nihal J. Singh, portfolio, projects, artworks">
 
-  <!-- burger menu -->
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
-  <!-- image grid -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <!-- font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="/style.css">
 
   <title>Nihal J. Singh</title>
@@ -25,104 +18,178 @@
 
 <body>
 
-  <!-- navigation bar -->
+  <!-- Navigation Bar -->
   <nav>
     <input type="checkbox" id="check">
     <label for="check" class="checkbtn">
       <i class="fas fa-bars w3-hover-text-brown"></i>
     </label>
-    <label> <a href="/index.html" class="active logo">Nihal J. Singh</a></label>
+    <label><a href="/index.html" class="active logo">Nihal J. Singh</a></label>
     <ul>
       <li><a class="not-active" href="/about.html">About</a></li>
       <li><a class="not-active" href="/cv.html">CV</a></li>
     </ul>
   </nav>
 
-  <!-- image grid -->
-  <div class="w3-content w3-padding-small" style="max-width:1564px;">
+  <!-- Sorting Dropdown -->
+  <div class="w3-center w3-margin-bottom">
+    <label for="sort-options">Sort by:</label>
+    <select id="sort-options" class="w3-select" style="width: 200px;">
+      <option value="default">Default</option>
+      <option value="newest">Newest to Oldest</option>
+      <option value="oldest">Oldest to Newest</option>
+    </select>
+  </div>
+
+  <!-- Projects Grid -->
+  <div id="projects-container" class="w3-content w3-padding-small" style="max-width:1564px;">
     <div class="w3-row-padding" style="padding-top: 80px;">
-      <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-col l3 m6 w3-margin-bottom" data-date="2024-07-20" data-name="Dialled In" data-index="1">
         <a href="/project/dialledIn.html">
           <div id="image-container" class="w3-display-container" style="font-size: 13px;">
-            <div id="image-text" class="image-text-small w3-display-bottommiddle w3-brown w3-text-white w3-padding-small">
-              Dialled In</div>
+            <div id="image-text" class="image-text-small w3-display-bottommiddle w3-text-white w3-padding-small">
+              Dialled In
+            </div>
             <img class="image-fit" src="/images/dialledIn/cover.webp" alt="Cover image of Dialled In project" loading="lazy" style="width:100%">
           </div>
         </a>
       </div>
-      <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-col l3 m6 w3-margin-bottom" data-date="2024-04-12" data-name="Lucinda Purkis" data-index="2">
         <a href="/project/lucindaPurkis.html">
           <div id="image-container" class="w3-display-container" style="font-size: 13px;">
-            <div id="image-text" class="image-text-small w3-display-bottommiddle w3-brown w3-text-white w3-padding-small">
-              Lucinda Purkis</div>
+            <div id="image-text" class="image-text-small w3-display-bottommiddle w3-text-white w3-padding-small">
+              Lucinda Purkis
+            </div>
             <img class="image-fit" src="/images/lucindaPurkis/cover.webp" alt="Two framed artworks by Lucinda Purkis" loading="lazy" style="width:100%">
           </div>
         </a>
       </div>
-      <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-col l3 m6 w3-margin-bottom" data-date="2024-01-10" data-name="Bryan Kneale" data-index="3">
         <a href="/project/bryanKneale.html">
           <div id="image-container" class="w3-display-container" style="font-size: 13px;">
-            <div id="image-text" class="image-text-small w3-display-bottommiddle w3-brown w3-text-white w3-padding-small">
-              Bryan Kneale</div>
+            <div id="image-text" class="image-text-small w3-display-bottommiddle w3-text-white w3-padding-small">
+              Bryan Kneale
+            </div>
             <img class="image-fit" src="/images/bryanKneale/cover.webp" alt="Wall brackets for Bryan Kneale's artworks" loading="lazy" style="width:100%">
           </div>
         </a>
       </div>
-      <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-col l3 m6 w3-margin-bottom" data-date="2023-09-01" data-name="Build Up" data-index="4">
         <a href="/project/buildUp.html">
           <div id="image-container" class="w3-display-container" style="font-size: 13px;">
-            <div id="image-text" class="image-text-small w3-display-bottommiddle w3-brown w3-text-white w3-padding-small">
-              Build Up</div>
+            <div id="image-text" class="image-text-small w3-display-bottommiddle w3-text-white w3-padding-small">
+              Build Up
+            </div>
             <img class="image-fit" src="/images/buildUp/cover.webp" alt="Two benches built by young people in the Build Up project" loading="lazy" style="width:100%">
           </div>
         </a>
       </div>
     </div>
     <div class="w3-row-padding">
-      <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-col l3 m6 w3-margin-bottom" data-date="2024-07-21" data-name="Leyton Más" data-index="5">
         <a href="/project/leyton-mas.html">
           <div id="image-container" class="w3-display-container" style="font-size: 13px;">
-            <div id="image-text" class="image-text-small w3-display-bottommiddle w3-brown w3-text-white w3-padding-small">
-              Leyton Más</div>
-            <img class="image-fit" src="/images/leyton-mas/cover.webp" alt="Close up of stage built for Leyton Más project" loading="lazy" style="width:100%">
+            <div id="image-text" class="image-text-small w3-display-bottommiddle w3-text-white w3-padding-small">
+              Leyton Más
+            </div>
+            <img class="image-fit" src="/images/leyton-mas/12.webp" alt="Close up of stage built for Leyton Más project" loading="lazy" style="width:100%">
           </div>
         </a>
       </div>
-      <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-col l3 m6 w3-margin-bottom" data-date="2024-09-09" data-name="Reborn Furniture" data-index="6">
         <a href="/project/reborn-furniture.html">
           <div id="image-container" class="w3-display-container" style="font-size: 13px;">
-            <div id="image-text" class="image-text-small w3-display-bottommiddle w3-brown w3-text-white w3-padding-small">
-              Reborn Furniture</div>
+            <div id="image-text" class="image-text-small w3-display-bottommiddle w3-text-white w3-padding-small">
+              Reborn Furniture
+            </div>
             <img class="image-fit w3-border" src="/images/reborn-furniture/cover.webp" alt="CAD drawing of Reborn Furniture project" loading="lazy" style="width:100%">
           </div>
         </a>
       </div>
-      <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-col l3 m6 w3-margin-bottom" data-date="2024-04-19" data-name="Art Clubbers" data-index="7">
         <a href="/project/art-clubbers.html">
           <div id="image-container" class="w3-display-container" style="font-size: 13px;">
-            <div id="image-text" class="image-text-small w3-display-bottommiddle w3-brown w3-text-white w3-padding-small">
-              Art Clubbers</div>
+            <div id="image-text" class="image-text-small w3-display-bottommiddle w3-text-white w3-padding-small">
+              Art Clubbers
+            </div>
             <img class="image-fit" src="/images/art-clubbers/cover.webp" alt="Display stand for Art Clubbers project" loading="lazy" style="width:100%">
           </div>
         </a>
       </div>
-      <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-col l3 m6 w3-margin-bottom" data-date="2023-09-17" data-name="Nature's Sound System" data-index="8">
         <a href="/project/natures-sound-system.html">
           <div id="image-container" class="w3-display-container" style="font-size: 13px;">
-            <div id="image-text" class="image-text-small w3-display-bottommiddle w3-brown w3-text-white w3-padding-small">
-              Nature's Sound System</div>
+            <div id="image-text" class="image-text-small w3-display-bottommiddle w3-text-white w3-padding-small">
+              Nature's Sound System
+            </div>
             <img class="image-fit" src="/images/natures-sound-system/13.webp" alt="Stage built for Nature's Sound System project" loading="lazy" style="width:100%">
           </div>
         </a>
       </div>
     </div>
+  </div>
 
-    <!-- footer -->
-    <footer class="w3-center w3-white" style="padding-top: 100px; padding-bottom: 50px; display: flex; flex-direction: row; justify-content: space-evenly;">
-      <a href="https://www.instagram.com/nihal.j.singh/" title="Instagram" target="_blank" class="footer"><img style="width: 50px;" src="/images/icon/instagram.png" alt="Instagram icon"></a>
-      <a href="https://www.linkedin.com/" title="LinkedIn" target="_blank" class="footer"><img style="width: 50px;" src="/images/icon/linkedin.png" alt="LinkedIn icon"></a>
-      <a href="https://soundcloud.com/two-ton-shun" title="SoundCloud" target="_blank" class="footer"><img style="width: 50px;" src="/images/icon/soundcloud.png" alt="SoundCloud icon"></a>
-    </footer>
+  <!-- Footer -->
+  <footer class="w3-center w3-white" style="padding-top: 100px; padding-bottom: 50px; display: flex; justify-content: space-evenly;">
+    <a href="https://www.instagram.com/nihal.j.singh/" title="Instagram" target="_blank"><img style="width: 50px;" src="/images/icon/instagram.png" alt="Instagram icon"></a>
+    <a href="https://www.linkedin.com/" title="LinkedIn" target="_blank"><img style="width: 50px;" src="/images/icon/linkedin.png" alt="LinkedIn icon"></a>
+    <a href="https://soundcloud.com/two-ton-shun" title="SoundCloud" target="_blank"><img style="width: 50px;" src="/images/icon/soundcloud.png" alt="SoundCloud icon"></a>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const projects = document.querySelectorAll('.w3-col');
+
+      // Add formatted date to each project's image text
+      projects.forEach(project => {
+        const date = project.dataset.date;
+        const name = project.dataset.name;
+        const imageText = project.querySelector('#image-text');
+
+        if (imageText && date) {
+          const formattedDate = new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+          imageText.innerHTML = `${name} <br> <span style="font-size: 12px; color: #ccc;">${formattedDate}</span>`;
+        }
+      });
+
+      // Sorting functionality
+      document.getElementById('sort-options').addEventListener('change', function () {
+        const sortOption = this.value;
+        const container = document.getElementById('projects-container');
+        const rows = Array.from(container.getElementsByClassName('w3-row-padding'));
+        const projects = rows.flatMap(row => Array.from(row.getElementsByClassName('w3-col')));
+
+        // Sort projects based on the selected option
+        if (sortOption === 'newest') {
+          projects.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
+        } else if (sortOption === 'oldest') {
+          projects.sort((a, b) => new Date(a.dataset.date) - new Date(b.dataset.date));
+        } else {
+          projects.sort((a, b) => a.dataset.index - b.dataset.index);
+        }
+
+        // Rebuild the grid with sorted projects
+        container.innerHTML = '';
+        let newRow = document.createElement('div');
+        newRow.className = 'w3-row-padding';
+        newRow.style.paddingTop = '80px';
+
+        projects.forEach((project, index) => {
+          newRow.appendChild(project);
+          if ((index + 1) % 4 === 0) {
+            container.appendChild(newRow);
+            newRow = document.createElement('div');
+            newRow.className = 'w3-row-padding';
+          }
+        });
+
+        if (newRow.children.length > 0) {
+          container.appendChild(newRow);
+        }
+      });
+    });
+  </script>
 
 </body>
 

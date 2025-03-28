@@ -1,7 +1,7 @@
+/* General Styles */
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
     font-family: "Marcellus", serif;
 }
 
@@ -10,12 +10,11 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    padding-top: 40px;
-    z-index: 1;
-    position: sticky;
-    overflow: hidden;
-    top: 0;
+    padding: 40px 20px 10px;
+    z-index: 9999; /* Ensure the navbar is on top of all other elements */
+    position: sticky; /* Keep the navbar at the top while scrolling */
+    top: 0; /* Stick the navbar to the top of the viewport */
+    box-shadow: none; /* Remove the shadow */
 }
 
 .logo {
@@ -35,6 +34,12 @@ ul li {
     margin-right: 20px;
 }
 
+ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.1s;
+}
+
 .active {
     padding: 10px;
     color: #795548;
@@ -44,21 +49,11 @@ ul li {
 
 .not-active {
     padding: 10px;
-    text-decoration: none;
 }
 
 .not-active:hover {
     background-color: #795548;
     color: white;
-}
-
-ul li a {
-    transition: color 0.1;
-    font-size: 20px;
-}
-
-ul li a:hover {
-    color: none;
 }
 
 .checkbtn {
@@ -72,9 +67,7 @@ ul li a:hover {
     display: none;
 }
 
-
-/* image grid */
-
+/* Image Grid */
 .image-fit {
     width: 100%;
     height: 300px;
@@ -88,14 +81,47 @@ ul li a:hover {
 }
 
 #image-text {
-    width: 100%;
+    background-color: transparent !important; /* No background */
+    color: white; /* White text for contrast */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 1); /* Stronger shadow for better visibility */
+    text-align: center; /* Center-align the text */
+    padding: 5px; /* Add padding for better readability */
+    font-size: 18px; /* Slightly larger font size for better visibility */
+    line-height: 1.5; /* Adjust line height for spacing between lines */
+    display: none; /* Hide the text by default */
+    position: absolute; /* Position the text over the image */
+    bottom: 0; /* Align the text at the bottom of the image */
+    left: 50%; /* Start positioning from the center horizontally */
+    transform: translateX(-50%); /* Center the text horizontally */
+    width: auto; /* Adjust the width to fit the text content */
+    max-width: 90%; /* Prevent the text from overflowing the image */
+    font-weight: bold; /* Make the text bold for better emphasis */
+    z-index: 2; /* Ensure the text is above any other elements */
 }
 
-/* .image-text-small {
-    font-size: 10px;
-} */
+#image-container:hover #image-text {
+    display: block; /* Show the text when hovering over the image */
+}
 
+/* Optional: Add a subtle gradient overlay to darken the image */
+#image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)); /* Subtle gradient */
+    z-index: 1; /* Place the gradient below the text */
+    opacity: 0; /* Hide the gradient by default */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
 
+#image-container:hover::before {
+    opacity: 1; /* Show the gradient when hovering over the image */
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
     .checkbtn {
         display: block;
@@ -125,25 +151,22 @@ ul li a:hover {
         font-size: 20px;
     }
 
-    #check:checked~ul {
+    #check:checked ~ ul {
         right: 0;
     }
 
     #image-text {
         display: block;
-        text-align: center;
     }
 
     .w3-margin-bottom {
-        margin-bottom: 40px !important
+        margin-bottom: 40px !important;
     }
 }
 
 @media (min-width: 769px) {
-
     #image-text {
         display: none;
-        text-align: center;
     }
 
     #image-container:hover #image-text {
@@ -151,13 +174,11 @@ ul li a:hover {
     }
 }
 
-
-/* images portfolio */
+/* Portfolio Section */
 #portfolio p {
     font-size: 20px;
     text-align: left;
-    margin-top: 2em;
-    margin-bottom: 1em;
+    margin: 2em 0 1em;
 }
 
 #portfolio a {
@@ -166,11 +187,17 @@ ul li a:hover {
 }
 
 #portfolio a:hover {
-    background-color: #795548;
     color: white;
 }
 
-/* footer */
+/* Footer */
 .footer:hover {
-    filter: drop-shadow(2px 2px 2px #795548)
+    filter: drop-shadow(2px 2px 2px #795548);
+}
+
+#image-container:hover #image-text {
+    display: block; /* Show the text when hovering over the image */
+    position: absolute; /* Position the text over the image */
+    bottom: 0; /* Align the text at the bottom of the image */
+    width: 100%; /* Ensure the text spans the full width of the image */
 }
