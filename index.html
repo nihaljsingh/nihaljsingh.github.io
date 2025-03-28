@@ -34,10 +34,10 @@
   <!-- Sorting Dropdown -->
   <div class="w3-center w3-margin-bottom">
     <label for="sort-options">Sort by:</label>
-    <select id="sort-options" class="w3-select" style="width: 200px;">
+    <select id="sort-options" class="styled-dropdown">
       <option value="default">Default</option>
-      <option value="newest">Newest to Oldest</option>
-      <option value="oldest">Oldest to Newest</option>
+      <option value="newest">Newest</option>
+      <option value="oldest">Oldest</option>
     </select>
   </div>
 
@@ -136,60 +136,8 @@
     <a href="https://soundcloud.com/two-ton-shun" title="SoundCloud" target="_blank"><img style="width: 50px;" src="/images/icon/soundcloud.png" alt="SoundCloud icon"></a>
   </footer>
 
-  <!-- JavaScript -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const projects = document.querySelectorAll('.w3-col');
-
-      // Add formatted date to each project's image text
-      projects.forEach(project => {
-        const date = project.dataset.date;
-        const name = project.dataset.name;
-        const imageText = project.querySelector('#image-text');
-
-        if (imageText && date) {
-          const formattedDate = new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
-          imageText.innerHTML = `${name} <br> <span style="font-size: 12px; color: #ccc;">${formattedDate}</span>`;
-        }
-      });
-
-      // Sorting functionality
-      document.getElementById('sort-options').addEventListener('change', function () {
-        const sortOption = this.value;
-        const container = document.getElementById('projects-container');
-        const rows = Array.from(container.getElementsByClassName('w3-row-padding'));
-        const projects = rows.flatMap(row => Array.from(row.getElementsByClassName('w3-col')));
-
-        // Sort projects based on the selected option
-        if (sortOption === 'newest') {
-          projects.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
-        } else if (sortOption === 'oldest') {
-          projects.sort((a, b) => new Date(a.dataset.date) - new Date(b.dataset.date));
-        } else {
-          projects.sort((a, b) => a.dataset.index - b.dataset.index);
-        }
-
-        // Rebuild the grid with sorted projects
-        container.innerHTML = '';
-        let newRow = document.createElement('div');
-        newRow.className = 'w3-row-padding';
-        newRow.style.paddingTop = '80px';
-
-        projects.forEach((project, index) => {
-          newRow.appendChild(project);
-          if ((index + 1) % 4 === 0) {
-            container.appendChild(newRow);
-            newRow = document.createElement('div');
-            newRow.className = 'w3-row-padding';
-          }
-        });
-
-        if (newRow.children.length > 0) {
-          container.appendChild(newRow);
-        }
-      });
-    });
-  </script>
+  <!-- Link to External JavaScript -->
+  <script src="/script.js"></script>
 
 </body>
 
