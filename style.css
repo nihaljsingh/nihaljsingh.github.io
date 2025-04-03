@@ -1,30 +1,28 @@
 /* General Styles */
+/* General background color for the body */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Marcellus", serif;
+    background-color: #fdf5f5; /* Light tan background */
+    color: #795548; /* Dark text for readability */
+    font-family: "Marcellus", serif; /* Ensure consistent font */
 }
 
+/* Navbar */
 nav {
-    background-color: white;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 40px 20px 10px;
-    z-index: 9999;
-    /* Ensure the navbar is on top of all other elements */
-    position: sticky;
-    /* Keep the navbar at the top while scrolling */
-    top: 0;
-    /* Stick the navbar to the top of the viewport */
-    box-shadow: none;
-    /* Remove the shadow */
+    align-items: center; /* Center items vertically */
+    padding: 20px 20px; /* Adjust padding for better spacing */
+    z-index: 9999; /* Ensure the navbar is on top of all other elements */
+    position: sticky; /* Keep the navbar at the top while scrolling */
+    top: 0; /* Stick the navbar to the top of the viewport */
 }
 
 .logo {
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: bold;
     letter-spacing: 5px;
+    display: flex;
+    align-items: center; /* Center the logo text vertically */
 }
 
 ul {
@@ -32,6 +30,7 @@ ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    align-items: center; /* Center the list items vertically */
 }
 
 ul li {
@@ -39,19 +38,31 @@ ul li {
 }
 
 ul li a {
-    font-size: 20px;
+    font-size: 1.75rem;
     text-decoration: none;
     transition: color 0.1s;
+    display: flex;
+    align-items: center; /* Center the link text vertically */
+    height: 100%; /* Ensure the links take up the full height of the navbar */
 }
 
 .active {
+    background-color: #795548;
     padding: 10px;
-    color: #795548;
+    color: white;
     text-decoration: none;
     font-weight: bold;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 5); /* Subtle shadow */
+}
+
+.active:hover {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
 }
 
 .not-active {
+    color: #795548;
     padding: 10px;
     text-decoration: none;
 }
@@ -63,7 +74,7 @@ ul li a {
 
 .checkbtn {
     font-size: 30px;
-    color: black;
+    color: #333;
     cursor: pointer;
     display: none;
 }
@@ -205,7 +216,7 @@ ul li a {
 
     #image-container::before {
         opacity: 1 !important;
-        /* Always show the black background */
+        /* Always show the #333 background */
     }
 
     .w3-margin-bottom {
@@ -215,14 +226,14 @@ ul li a {
     /* Default state for mobile view */
     #image-container::before {
         opacity: 0;
-        /* Hide the black background by default */
+        /* Hide the #333 background by default */
         transition: opacity 0.3s ease;
         /* Smooth transition */
     }
 
     #image-container.visible::before {
         opacity: 1;
-        /* Show the black background when in view */
+        /* Show the #333 background when in view */
     }
 
     #image-text {
@@ -252,20 +263,29 @@ ul li a {
 #portfolio p {
     font-size: 20px;
     text-align: left;
-    margin: 2em 0 1em;
+    margin: 0em 0 1em;
 }
 
 #portfolio a {
-    color: black;
+    color: #795548;
     text-decoration: underline #795548;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+
 }
 
 #portfolio a:hover {
     background-color: #795548;
     color: white;
+    text-decoration: none;
 }
 
 /* Footer */
+/* Footer background color */
+footer {
+    color: #333; /* Dark text for contrast */
+    padding: 20px;
+}
+
 .footer:hover {
     filter: drop-shadow(2px 2px 2px #795548);
 }
@@ -402,8 +422,8 @@ footer {
 
 /* Dropdown Links */
 .dropdown-content a {
-    color: black;
-    /* Black text */
+    color: #333;
+    /* #333 text */
     padding: 12px 16px;
     /* Padding inside each link */
     text-decoration: none;
@@ -428,4 +448,117 @@ footer {
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
     /* Darker green on hover */
+}
+
+/* Links */
+a {
+    color: #795548; /* Brown text color */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #5d4037; /* Darker brown on hover */
+}
+
+/* Buttons or Highlights */
+button, .highlight {
+    background-color: #e8dfd6; /* Soft cream */
+    color: #333; /* Dark text */
+    border: 1px solid #795548; /* Brown border */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+button:hover, .highlight:hover {
+    background-color: #795548; /* Brown background */
+    color: #fff; /* White text */
+}
+
+/* Footer icons */
+footer a img {
+    filter: grayscale(50%); /* Subtle grayscale effect */
+    transition: filter 0.3s ease;
+}
+
+footer a img:hover {
+    filter: grayscale(0%); /* Remove grayscale on hover */
+}
+
+/* About Section */
+.about-section {
+    padding: 50px 20px;
+    background-color: #F4EAE6; /* Light tan background */
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+    gap: 20px; /* Add spacing between text and image */
+    align-items: center; /* Align items vertically */
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+}
+
+.about-text {
+    flex: 1 1 50%; /* Text takes up 50% of the width */
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333; /* Dark gray text */
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    color: #795548; /* Brown heading */
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+.about-image {
+    flex: 1 1 50%; /* Image takes up 50% of the width */
+    text-align: center; /* Center the image */
+}
+
+.about-image img {
+    max-width: 100%; /* Ensure the image doesn’t overflow */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.about-text a:hover::after {
+    content: " →"; /* Add an arrow icon on hover */
+    color: #D84315; /* Match the hover color */
+    transition: color 0.3s ease;
+}
+
+/* Links in About Text */
+.about-text a {
+    color: #5D4037; /* Soft brown */
+    font-weight: bold; /* Keep the links bold for emphasis */
+    text-decoration: none; /* Remove underline */
+    border-bottom: 1px solid #5D4037; /* Add a subtle bottom border */
+    transition: color 0.3s ease, border-color 0.3s ease; /* Smooth hover effect */
+}
+
+.about-text a:hover {
+    color: #795548; /* Slightly darker brown on hover */
+    border-bottom: 1px solid #795548; /* Change border color on hover */
+    background-color: #F4EAE6; /* Light tan background highlight */
+    padding: 2px 4px; /* Add padding for the highlight */
+    border-radius: 3px; /* Round the edges of the highlight */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack text and image vertically */
+    }
+
+    .about-text, .about-image {
+        flex: 1 1 100%; /* Make both elements take full width */
+    }
 }
