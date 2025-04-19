@@ -260,6 +260,17 @@ ul li a {
 }
 
 /* Portfolio Section */
+#portfolio .name {
+    font-size: 30px;
+    text-align: center;
+    margin: 0em 0 1em;
+    font-weight:bold;
+}
+#portfolio .date {
+    font-size: 18px;
+    text-align: center;
+    margin: 0em 0 1em;
+}
 #portfolio p {
     font-size: 20px;
     text-align: left;
