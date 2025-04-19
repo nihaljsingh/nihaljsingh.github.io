@@ -562,3 +562,51 @@ footer a img:hover {
         flex: 1 1 100%; /* Make both elements take full width */
     }
 }
+
+/* Sort Dropdown Styling */
+.sort-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+#sort-button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 150px; /* Set a fixed width for the button */
+  justify-content: space-between; /* Align text and icon properly */
+}
+
+#sort-icon {
+  font-size: 12px;
+}
+
+.sort-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 100;
+  width: 150px; /* Match the width of the button */
+}
+
+.sort-menu label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.sort-menu input[type="radio"] {
+  margin-right: 10px;
+}

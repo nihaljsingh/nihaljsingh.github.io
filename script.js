@@ -73,3 +73,50 @@ document.addEventListener('DOMContentLoaded', () => {
     imageContainers.forEach(container => observer.observe(container));
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const sortButton = document.getElementById("sort-button");
+  const sortMenu = document.getElementById("sort-menu");
+  const sortOptions = document.getElementsByName("sort-option");
+  const projectsContainer = document.getElementById("projects-container");
+  const rows = Array.from(projectsContainer.getElementsByClassName("w3-row-padding"));
+
+  // Toggle the sort menu
+  sortButton.addEventListener("click", () => {
+    sortMenu.style.display = sortMenu.style.display === "none" || sortMenu.style.display === "" ? "block" : "none";
+  });
+
+  // Sort projects based on the selected option
+  sortOptions.forEach(option => {
+    option.addEventListener("change", () => {
+      const selectedValue = option.value;
+
+      // Collect all project elements into a single array
+      const allProjects = rows.flatMap(row => Array.from(row.getElementsByClassName("w3-col")));
+
+      // Sort the projects array
+      const sortedProjects = [...allProjects].sort((a, b) => {
+        const dateA = new Date(a.getAttribute("data-date"));
+        const dateB = new Date(b.getAttribute("data-date"));
+
+        if (selectedValue === "newest") return dateB - dateA;
+        if (selectedValue === "oldest") return dateA - dateB;
+        return a.getAttribute("data-index") - b.getAttribute("data-index");
+      });
+
+      // Clear the rows and redistribute the sorted projects
+      rows.forEach(row => (row.innerHTML = ""));
+      sortedProjects.forEach((project, index) => {
+        const rowIndex = Math.floor(index / 4); // 4 projects per row
+        rows[rowIndex].appendChild(project);
+      });
+    });
+  });
+
+  // Close the dropdown if clicked outside
+  document.addEventListener("click", (event) => {
+    if (!sortButton.contains(event.target) && !sortMenu.contains(event.target)) {
+      sortMenu.style.display = "none";
+    }
+  });
+});

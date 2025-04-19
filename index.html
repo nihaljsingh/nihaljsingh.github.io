@@ -40,12 +40,22 @@
 
   <!-- Sorting Dropdown -->
   <div class="w3-center w3-margin-bottom">
-    <label for="sort-options">Sort by:</label>
-    <select id="sort-options" class="styled-dropdown">
-      <option value="default">Default</option>
-      <option value="newest">Newest</option>
-      <option value="oldest">Oldest</option>
-    </select>
+    <div class="sort-dropdown">
+      <button id="sort-button" class="styled-dropdown">
+        Sort 
+      </button>
+      <div id="sort-menu" class="sort-menu" style="display: none;">
+        <label>
+          <input type="radio" name="sort-option" value="default" checked> Default
+        </label><br>
+        <label>
+          <input type="radio" name="sort-option" value="newest"> Newest
+        </label><br>
+        <label>
+          <input type="radio" name="sort-option" value="oldest"> Oldest
+        </label>
+      </div>
+    </div>
   </div>
 
   <!-- Projects Grid -->
@@ -54,7 +64,7 @@
     <div class="w3-row-padding" style="padding-top: 80px;">
 
       <!-- Pearson St. Adventure Playground -->
-      <div class="w3-col l3 m6 w3-margin-bottom" data-date="2025-04-15" data-name="Pearson St. Adventure Playground" data-index="1">
+      <div class="w3-col l3 m6 w3-margin-bottom" data-date="2025-04-15" data-name="Pearson St. Adventure Playground" data-index="1" data-category="community art">
         <a href="/project/pearson-playground.html">
           <div id="image-container" class="w3-display-container" style="font-size: 13px;">
             <div id="image-text" class="image-text-small w3-display-bottommiddle w3-text-white w3-padding-small">
@@ -67,7 +77,7 @@
       </div>
 
       <!-- Dialled In -->
-      <div class="w3-col l3 m6 w3-margin-bottom" data-date="2024-07-20" data-name="Dialled In" data-index="2">
+      <div class="w3-col l3 m6 w3-margin-bottom" data-date="2024-07-20" data-name="Dialled In" data-index="2" data-category="functional woodwork">
         <a href="/project/dialled-in.html">
           <div id="image-container" class="w3-display-container" style="font-size: 13px;">
             <div id="image-text" class="image-text-small w3-display-bottommiddle w3-text-white w3-padding-small">
@@ -81,7 +91,7 @@
 
       <!-- Barbican x Beyond The Box -->
       <div class="w3-col l3 m6 w3-margin-bottom" data-date="2025-03-14" data-name="Barbican x Beyond The Box"
-        data-index="3">
+        data-index="3" data-category="community art">
         <a href="/project/barbican-btb.html">
           <div id="image-container" class="w3-display-container" style="font-size: 13px;">
             <div id="image-text" class="image-text-small w3-display-bottommiddle w3-text-white w3-padding-small">
@@ -94,7 +104,7 @@
       </div>
 
       <!-- Lucinda Purkis -->
-      <div class="w3-col l3 m6 w3-margin-bottom" data-date="2024-04-12" data-name="Lucinda Purkis" data-index="4">
+      <div class="w3-col l3 m6 w3-margin-bottom" data-date="2024-04-12" data-name="Lucinda Purkis" data-index="4" data-category="functional woodwork">
         <a href="/project/lucinda-purkis.html">
           <div id="image-container" class="w3-display-container" style="font-size: 13px;">
             <div id="image-text" class="image-text-small w3-display-bottommiddle w3-text-white w3-padding-small">
@@ -111,7 +121,7 @@
     <div class="w3-row-padding">
 
       <!-- Bryan Kneale -->
-      <div class="w3-col l3 m6 w3-margin-bottom" data-date="2024-01-10" data-name="Bryan Kneale" data-index="4">
+      <div class="w3-col l3 m6 w3-margin-bottom" data-date="2024-01-10" data-name="Bryan Kneale" data-index="4" data-category="functional woodwork">
         <a href="/project/bryan-kneale.html">
           <div id="image-container" class="w3-display-container" style="font-size: 13px;">
             <div id="image-text" class="image-text-small w3-display-bottommiddle w3-text-white w3-padding-small">
@@ -124,7 +134,7 @@
       </div>
 
       <!-- Build Up -->
-      <div class="w3-col l3 m6 w3-margin-bottom" data-date="2023-09-01" data-name="Build Up" data-index="5">
+      <div class="w3-col l3 m6 w3-margin-bottom" data-date="2023-09-01" data-name="Build Up" data-index="5" data-category="functional woodwork">
         <a href="/project/build-up.html">
           <div id="image-container" class="w3-display-container" style="font-size: 13px;">
             <div id="image-text" class="image-text-small w3-display-bottommiddle w3-text-white w3-padding-small">
@@ -137,7 +147,7 @@
       </div>
 
       <!-- Leyton Más -->
-      <div class="w3-col l3 m6 w3-margin-bottom" data-date="2024-07-21" data-name="Leyton Más" data-index="6">
+      <div class="w3-col l3 m6 w3-margin-bottom" data-date="2024-07-21" data-name="Leyton Más" data-index="6" data-category="functional woodwork">
         <a href="/project/leyton-mas.html">
           <div id="image-container" class="w3-display-container" style="font-size: 13px;">
             <div id="image-text" class="image-text-small w3-display-bottommiddle w3-text-white w3-padding-small">
@@ -150,7 +160,7 @@
       </div>
 
       <!-- Reborn Furniture -->
-      <div class="w3-col l3 m6 w3-margin-bottom" data-date="2024-09-09" data-name="Reborn Furniture" data-index="7">
+      <div class="w3-col l3 m6 w3-margin-bottom" data-date="2024-09-09" data-name="Reborn Furniture" data-index="7" data-category="functional woodwork">
         <a href="/project/reborn-furniture.html">
           <div id="image-container" class="w3-display-container" style="font-size: 13px;">
             <div id="image-text" class="image-text-small w3-display-bottommiddle w3-text-white w3-padding-small">
@@ -168,7 +178,7 @@
 
       <!-- Nature's Sound System -->
       <div class="w3-col l3 m6 w3-margin-bottom" data-date="2023-09-17" data-name="Nature's Sound System"
-        data-index="8">
+        data-index="8" data-category="sculpture">
         <a href="/project/natures-sound-system.html">
           <div id="image-container" class="w3-display-container" style="font-size: 13px;">
             <div id="image-text" class="image-text-small w3-display-bottommiddle w3-text-white w3-padding-small">
@@ -182,7 +192,7 @@
 
       <!-- Art Clubbers -->
       <div class="w3-col l3 m6 w3-margin-bottom" data-date="2024-04-19" data-name="Art Clubbers" data-index="9">
-        <a href="/project/art-clubbers.html">
+        <a href="/project/art-clubbers.html" data-category="functional woodwork">
           <div id="image-container" class="w3-display-container" style="font-size: 13px;">
             <div id="image-text" class="image-text-small w3-display-bottommiddle w3-text-white w3-padding-small">
               Art Clubbers
