@@ -74,49 +74,55 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const sortButton = document.getElementById("sort-button");
-  const sortMenu = document.getElementById("sort-menu");
-  const sortOptions = document.getElementsByName("sort-option");
-  const projectsContainer = document.getElementById("projects-container");
-  const rows = Array.from(projectsContainer.getElementsByClassName("w3-row-padding"));
+document.addEventListener('DOMContentLoaded', () => {
+  const sortButton = document.getElementById('sort-button');
+  const sortMenu = document.getElementById('sort-menu');
+  const sortOptions = document.getElementsByName('sort-option');
+  const projectsContainer = document.getElementById('projects-container');
+  const rows = Array.from(projectsContainer.getElementsByClassName('w3-row-padding'));
 
-  // Toggle the sort menu
-  sortButton.addEventListener("click", () => {
-    sortMenu.style.display = sortMenu.style.display === "none" || sortMenu.style.display === "" ? "block" : "none";
+  // Utility function to sort projects
+  const sortProjects = (order) => {
+    const allProjects = rows.flatMap(row => Array.from(row.getElementsByClassName('w3-col')));
+
+    // Sort projects by date
+    const sortedProjects = allProjects.sort((a, b) => {
+      const dateA = new Date(a.getAttribute('data-date'));
+      const dateB = new Date(b.getAttribute('data-date'));
+      return order === 'newest' ? dateB - dateA : dateA - dateB;
+    });
+
+    // Clear and rebuild the grid with sorted projects
+    rows.forEach(row => (row.innerHTML = '')); // Clear rows
+    sortedProjects.forEach((project, index) => {
+      const rowIndex = Math.floor(index / 4); // 4 projects per row
+      rows[rowIndex].appendChild(project);
+    });
+  };
+
+  // Initialize page with 'newest' sort
+  sortProjects('newest');
+  sortOptions.forEach(option => {
+    if (option.value === 'newest') option.checked = true; // Select 'newest' by default
   });
 
-  // Sort projects based on the selected option
+  // Show/hide the sort menu when sort button is clicked
+  sortButton.addEventListener('click', () => {
+    sortMenu.style.display = sortMenu.style.display === 'none' || sortMenu.style.display === '' ? 'block' : 'none';
+  });
+
+  // Apply sorting when a sort option is selected
   sortOptions.forEach(option => {
-    option.addEventListener("change", () => {
-      const selectedValue = option.value;
-
-      // Collect all project elements into a single array
-      const allProjects = rows.flatMap(row => Array.from(row.getElementsByClassName("w3-col")));
-
-      // Sort the projects array
-      const sortedProjects = [...allProjects].sort((a, b) => {
-        const dateA = new Date(a.getAttribute("data-date"));
-        const dateB = new Date(b.getAttribute("data-date"));
-
-        if (selectedValue === "newest") return dateB - dateA;
-        if (selectedValue === "oldest") return dateA - dateB;
-        return a.getAttribute("data-index") - b.getAttribute("data-index");
-      });
-
-      // Clear the rows and redistribute the sorted projects
-      rows.forEach(row => (row.innerHTML = ""));
-      sortedProjects.forEach((project, index) => {
-        const rowIndex = Math.floor(index / 4); // 4 projects per row
-        rows[rowIndex].appendChild(project);
-      });
+    option.addEventListener('change', () => {
+      sortProjects(option.value);
+      sortMenu.style.display = 'none'; // Auto-close the menu
     });
   });
 
   // Close the dropdown if clicked outside
-  document.addEventListener("click", (event) => {
+  document.addEventListener('click', (event) => {
     if (!sortButton.contains(event.target) && !sortMenu.contains(event.target)) {
-      sortMenu.style.display = "none";
+      sortMenu.style.display = 'none';
     }
   });
 });
